@@ -1,0 +1,13 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #8b2424;
+    border-radius: 8px;  
+    color: white;
+    text-align: center;
+}
+
+#text {
+    font-size: 22px;
+}
