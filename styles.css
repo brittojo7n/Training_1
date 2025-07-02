@@ -47,3 +47,12 @@ span.highlight {
     background-color: #f0f0f0;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e5e1db;
+    padding: 12px 24px;
+    list-style: none;
+}
