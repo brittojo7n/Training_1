@@ -44,24 +44,29 @@
             This line is for illustrating <b>formatting</b> tags as it is seen: <b>Bold</b>, <i>Italic</i>, <u>Underline</u>, <strong>Strong</strong>, <em>Emphasis</em>.</p>
     </div>
     <div class="container1">
-        <h2>Ordered List</h2>
-        <ol type="I">
-            <li>Assassin's Creed</li>
-            <li>Call of Duty</li>
-            <li>Counter-Strike</li>
-        </ol>
-        <h2>Unordered List</h2>
-        <ul type="square">
-            <li>GTA Online </li>
-            <li>Fortnite</li>
-            <li>Valorant</li>
-        </ul>
+        <section>
+            <h2>Ordered List</h2>
+            <ol type="I">
+                <li>Assassin's Creed</li>
+                <li>Call of Duty</li>
+                <li>Counter-Strike</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Unordered List</h2>
+            <ul type="square">
+                <li>GTA Online </li>
+                <li>Fortnite</li>
+                <li>Valorant</li>
+            </ul>
+        </section>
         <img src="image.png" alt="Couldn't access the image.">
     </div>
     <div class="container1">
         <iframe src="/index.html" width="640" height="480" title="Iframe"></iframe>
     </div>
     <div class="container2">
+        <section>
         <h2>Span</h2>
         <p>
             This is a <span class="highlight">span element</span> used to demonstrate inline styling or grouping of text.
@@ -69,9 +74,22 @@
         <p>
             It can be used to apply styles or scripts to a <span class="highlight">specific part of the text</span> without breaking the flow of the document.
         </p>
+        </section>
+        <section>
+        <h2>Selection</h2>
+        <label for="games">Select a game:</label>
+        <select id="games" name="games">
+            <option value="ac">Assassin's Creed</option>
+            <option value="cod">Call of Duty</option>
+            <option value="cs">Counter-Strike</option>
+            <option value="gta">GTA Online</option>
+            <option value="fortnite">Fortnite</option>
+            <option value="valorant">Valorant</option>
+        </select>
+        <button onclick="alert('Game selected!')">Submit</button>
+        </section>
     </div>
     <div class="newsletter-container">
-        <h2>Sample Form</h2>
         <form action="#" method="post">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
