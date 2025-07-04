@@ -6,95 +6,204 @@
     <title>Index</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            list-style: none;
+            display: flex;
+            background: #333;
+            padding: 0;
+            margin: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar li {
+            margin: 0;
+        }
+        .navbar a {
+            display: block;
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background: #444;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 24px 20px 16px 20px;
+            text-align: center;
+        }
+        .main-flex {
+            display: flex;
+            flex-direction: row;
+            min-height: 500px;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .left-section section {
+            background: #e9ecef;
+            padding: 16px;
+            border-radius: 8px;
+        }
+        .left-section article {
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+        }
+        .right-section {
+            flex: 1.2;
+            background: #f1f1ff;
+            padding: 16px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: 30px;
+            width: 100%;
+        }
+        .footer-newsletter {
+            margin: 0 auto;
+            max-width: 400px;
+        }
+        .footer-newsletter form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .main-flex {
+                flex-direction: column;
+            }
+            .right-section, .left-section {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-<body> 
+<body>
     <ul class="navbar">
         <li><a href="/Training_1/home.html">Home</a></li>
         <li><a href="/Training_1/about.html">About</a></li>
         <li><a href="/Training_1/services.html">Services</a></li>
         <li><a href="/Training_1/contact.html">Contact</a></li>
     </ul>
-    <div class="container">
+    <header>
         <h1>Welcome to My Page</h1>
-        <p id="text">This is a simple HTML document with a linked CSS file.</p>
-        <p id="text2">The following is a table containing some sample data:</p>
-        <table id="table1">
-            <tr>
-                <th>S.No.</th>
-                <th>Name</th>
-                <th>Age</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Jane Smith</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Sam Brown</td>
-                <td>28</td>
-            </tr>
-        </table>
-        <p id="text1">
-            This line is for illustrating <b>formatting</b> tags as it is seen: <b>Bold</b>, <i>Italic</i>, <u>Underline</u>, <strong>Strong</strong>, <em>Emphasis</em>.</p>
+        <p>This is a simple HTML document with a linked CSS file.</p>
+    </header>
+    <div class="main-flex">
+        <div class="left-section">
+            <section>
+                <h2>Sample Data Table</h2>
+                <p>The following is a table containing some sample data:</p>
+                <table id="table1">
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sam Brown</td>
+                        <td>28</td>
+                    </tr>
+                </table>
+            </section>
+            <article>
+                <h2>Formatting Tags</h2>
+                <p>
+                    This line is for illustrating <b>formatting</b> tags as it is seen: <b>Bold</b>, <i>Italic</i>, <u>Underline</u>, <strong>Strong</strong>, <em>Emphasis</em>.
+                </p>
+            </article>
+            <section>
+                <h2>Span & Selection</h2>
+                <p>
+                    This is a <span class="highlight">span element</span> used to demonstrate inline styling or grouping of text.
+                </p>
+                <p>
+                    It can be used to apply styles or scripts to a <span class="highlight">specific part of the text</span> without breaking the flow of the document.
+                </p>
+                <h3>Selection</h3>
+                <label for="games">Select a game:</label>
+                <select id="games" name="games">
+                    <option value="ac">Assassin's Creed</option>
+                    <option value="cod">Call of Duty</option>
+                    <option value="cs">Counter-Strike</option>
+                    <option value="gta">GTA Online</option>
+                    <option value="fortnite">Fortnite</option>
+                    <option value="valorant">Valorant</option>
+                </select>
+                <button onclick="alert('Game selected!')">Submit</button>
+            </section>
+        </div>
+        <div class="right-section">
+            <section>
+                <h2>Lists</h2>
+                <div style="display: flex; gap: 40px;">
+                    <div>
+                        <h3>Ordered List</h3>
+                        <ol type="I">
+                            <li>Assassin's Creed</li>
+                            <li>Call of Duty</li>
+                            <li>Counter-Strike</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3>Unordered List</h3>
+                        <ul type="square">
+                            <li>GTA Online </li>
+                            <li>Fortnite</li>
+                            <li>Valorant</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="image.png" alt="Couldn't access the image." style="margin-top: 16px; max-width: 100%;">
+            </section>
+            <section>
+                <h2>Iframe Example</h2>
+                <iframe src="/index.html" width="100%" height="200" title="Iframe"></iframe>
+            </section>
+        </div>
     </div>
-    <div class="container1">
-        <section>
-            <h2>Ordered List</h2>
-            <ol type="I">
-                <li>Assassin's Creed</li>
-                <li>Call of Duty</li>
-                <li>Counter-Strike</li>
-            </ol>
-        </section>
-        <section>
-            <h2>Unordered List</h2>
-            <ul type="square">
-                <li>GTA Online </li>
-                <li>Fortnite</li>
-                <li>Valorant</li>
-            </ul>
-        </section>
-        <img src="image.png" alt="Couldn't access the image.">
-    </div>
-    <div class="container1">
-        <iframe src="/index.html" width="640" height="480" title="Iframe"></iframe>
-    </div>
-    <div class="container2">
-        <section>
-        <h2>Span</h2>
-        <p>
-            This is a <span class="highlight">span element</span> used to demonstrate inline styling or grouping of text.
-        </p>
-        <p>
-            It can be used to apply styles or scripts to a <span class="highlight">specific part of the text</span> without breaking the flow of the document.
-        </p>
-        </section>
-        <section>
-        <h2>Selection</h2>
-        <label for="games">Select a game:</label>
-        <select id="games" name="games">
-            <option value="ac">Assassin's Creed</option>
-            <option value="cod">Call of Duty</option>
-            <option value="cs">Counter-Strike</option>
-            <option value="gta">GTA Online</option>
-            <option value="fortnite">Fortnite</option>
-            <option value="valorant">Valorant</option>
-        </select>
-        <button onclick="alert('Game selected!')">Submit</button>
-        </section>
-    </div>
-    <div class="newsletter-container">
-        <form action="#" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </div>
+    <footer>
+        <div class="footer-newsletter">
+            <h2>Newsletter</h2>
+            <form action="#" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
 </body>
-</html> 
+</html>
