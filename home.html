@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            color: rgb(255, 255, 255);
+            background-color: rgb(18, 18, 18);
+        }
+        a {
+            color: rgb(236, 141, 235);
+        }
+        a:hover {
+            color: rgb(207, 173, 255);
+        }
+        p {
+            color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: sticky;
+            top: 0;
+            border: 10px solid rgb(255, 255, 255);
+            padding: 10px;
+            z-index: 1;">   
+        <p>
+            Home Page - Welcome! This header stays visible while you browse.
+        </p>
+        </div><br><br>
+        <div style="box-sizing: border-box;
+            border: 3px solid rgb(255, 255, 255);
+            padding: 15px;
+            width: 400px;
+            height: auto;
+            border-radius: 10px;">
+        <p>
+        This is the home page of your website.<br>
+        <a href="/index.html">Visit the Main Index</a>
+        </p>
+        <p style="color: yellowgreen;">
+        This paragraph demonstrates inline CSS styling.<br>
+        </p>
+        </div>
+        <br>
+        <div style="display: inline-block; 
+            background-color: rgb(129, 128, 128);">
+        <p>
+            Explore different sections and features below.
+        </p>
+        </div>
+        <div style="display: none; 
+            background-color: rgb(129, 128, 128);">
+        <p>
+            This content is hidden and not visible on the page.
+        </p>
+        </div>
+        <div style="top: 20px; 
+            left: 20px; 
+            box-sizing: border-box;
+            border: 3px solid rgb(255, 255, 255);
+            padding: 15px;
+            width: 400px;
+            height: 1000px;
+            border-radius: 10px;
+            position: relative;">
+        <p>
+            This section uses relative positioning for layout demonstration.
+        </p>
+        </div><br><br>
+        <div style="display: flex; 
+            gap: 16px; 
+            border: 2px solid #fff; 
+            padding: 10px; 
+            border-radius: 8px;">
+        <div style="background-color: #333; padding: 10px; border-radius: 4px;">Feature 1</div>
+        <div style="background-color: #444; padding: 10px; border-radius: 4px;">Feature 2</div>
+        <div style="background-color: #555; padding: 10px; border-radius: 4px;">Feature 3</div>
+        </div><br>  
+        <div style="display: flex; 
+            flex-direction: column; 
+            gap: 16px; 
+            border: 2px solid #fff; 
+            padding: 10px; 
+            border-radius: 8px;">
+        <div style="background-color: #333; padding: 10px; border-radius: 4px;">Quick Link A</div>
+        <div style="background-color: #444; padding: 10px; border-radius: 4px;">Quick Link B</div>
+        <div style="background-color: #555; padding: 10px; border-radius: 4px;">Quick Link C</div>
+        </div><br>
+        <div style="display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 16px; 
+            border: 2px solid #fff; 
+            padding: 10px; 
+            border-radius: 8px;">
+        <div style="background-color: #333; padding: 10px; border-radius: 4px;">Overview</div>
+        <div style="background-color: #444; padding: 10px; border-radius: 4px;">Updates</div>
+        <div style="background-color: #555; padding: 10px; border-radius: 4px;">Resources</div>
+        <div style="background-color: #666; padding: 10px; border-radius: 4px;">Contact</div>
+        <div style="background-color: #777; padding: 10px; border-radius: 4px;">Support</div>
+        <div style="background-color: #888; padding: 10px; border-radius: 4px;">About</div>
+    </div>
+</body>
+</html>
