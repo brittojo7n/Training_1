@@ -1,10 +1,23 @@
 let a = 6;
 let b = 9;
-let c = a + b;
-let d = 'ab'
-let e = 'cd';
-let f = d + e;
-let g = f + c;
 
-console.log("The sum of a and b is: " + c);
-console.log("The value of g is: " + g);
+console.log("The sum of a and b is: " + (a + b));
+
+if (a > b) {
+    console.log("The difference between a and b is: " + (a - b));
+} else {
+    console.log("The difference between a and b is: " + (b - a));
+}
+
+let c = "light";
+let d = "house";
+
+console.log("c is: " + c + " (" + typeof c + ")");
+console.log("d is: " + d + " (" + typeof d + ")");
+console.log("Concatenated string (c + d): " + (c + d));
+
+let e = 3.14;
+
+console.log("The value of e is: " + e + " (" + typeof e + ")");
+console.log("Concatenated String (e + c): " + (e + c)); // This will concatenate e and c as strings
+console.log("");
