@@ -214,3 +214,20 @@ for (i in [1,5,10,15,20]){
 for (x in {a: 1, b: 2, c: 3}) {
     console.log("x:", x, "Datatype:", typeof(x));
 }
+
+x=0
+// Conditional Statement to check if x is equal to 10
+if (!x){
+    console.log("x is not defined"); // This will be true for undefined, null, 0, NaN, and false
+    console.log(x)
+}
+else{
+    console.log("x is defined");
+    console.log(x)
+}
+
+x=2;
+if (x=1){
+    console.log("x is equal to 1"); // This will always be true because x is assigned the value 1
+    console.log(x);
+}
