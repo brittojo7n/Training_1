@@ -210,3 +210,7 @@ for (i in [1,5,10,15,20]){
     console.log("i:", i, "Datatype:", typeof(i), " j:", j, "Datatype:", typeof(j))
     j += i; // Index value returned by for-in loop is of string data type
 }
+
+for (x in {a: 1, b: 2, c: 3}) {
+    console.log("x:", x, "Datatype:", typeof(x));
+}
