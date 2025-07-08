@@ -1,3 +1,5 @@
+/*
+
 let a = 6;
 let b = 9;
 
@@ -48,6 +50,8 @@ let x = 10;
 let y = 20;
 let max = (x > y) ? x : y; // If x is greater than y, max will be x, otherwise it will be y
 console.log("The maximum of x and y is: " + max);
+
+*/
 
 // Logical Operators
 if (10 > 5 | 20 > 30 & 30 > 40)  {
