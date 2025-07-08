@@ -200,3 +200,13 @@ while (true) {
     console.log(i)
     if (i === 5) break; // Exit the loop when i is 5
 }
+
+for (i = -1; i > -10; i--) {    
+    console.log(--i);
+}
+
+j=0;
+for (i in [1,5,10,15,20]){
+    console.log("i:", i, "Datatype:", typeof(i), " j:", j, "Datatype:", typeof(j))
+    j += i; // Index value returned by for-in loop is of string data type
+}
