@@ -94,7 +94,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: rgb(54, 54, 106);
+    color: rgb(28, 183, 255);
 }
 .container {
     padding: 20px;
@@ -147,4 +147,77 @@ span.highlight {
     margin: 32px auto;
     text-align: center;
     color: white;
+}
+
+.class1 {
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btn1 {
+    background-color: #21343a;
+    color: rgb(148, 255, 225);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.new-class {
+    color: #8ca710; /* Tomato color */
+}
+
+#btn2 {
+    background-color: #2d4b2e; /* Green */
+    color: rgb(203, 255, 82);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#add-todo-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#remove-todo-btn {
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-todo-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#remove-todo-btn:hover {
+    background-color: #970505; /* Darker green */
+    color: white;
+}
+
+#add-todo-btn:hover {
+    background-color: #0e7913; /* Darker green */
+    color: white;
+}
+
+#btn1:hover {
+    background-color: #26ffe9; /* Darker blue */
+    color: rgb(24, 33, 40);
 }

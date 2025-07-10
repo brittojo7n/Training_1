@@ -51,8 +51,6 @@ let y = 20;
 let max = (x > y) ? x : y; // If x is greater than y, max will be x, otherwise it will be y
 console.log("The maximum of x and y is: " + max);
 
-*/
-
 // Logical Operators
 if (10 > 5 | 20 > 30 & 30 > 40)  {
     console.log("10 > 5 | 20 > 30 & 30 > 40 is true");
@@ -229,5 +227,99 @@ else{
 x=2;
 if (x=1){
     console.log("x is equal to 1"); // This will always be true because x is assigned the value 1
-    console.log(x);
+    console.log(x); 
 }
+
+*/
+
+const m1 = document.getElementById("games");
+const m2 = document.getElementsByClassName("class1");
+const m3 = document.querySelectorAll("p");
+const m4 = document.getElementsByTagName("body");
+const m5 = document.getElementById("id2");
+const m6 = document.getElementById("btn1");
+const m7 = document.getElementById("btn2");
+
+console.log("m1:", m1);
+console.log("m2:", m2);
+console.log("m3:", m3);
+console.log("m4:", m4);
+console.log("m5:", m5);
+console.log("m6:", m6);
+console.log("m7:", m7);
+
+m3[0].style.color = "crimson";
+
+
+document.addEventListener("click", myFunction);
+
+function myFunction() {
+  m5.innerHTML = "Welcome to My Page!";
+}
+
+function myFunction2() {
+  if (m6.innerHTML == "You clicked the button!") {
+    m6.innerHTML = "Click Me!";
+    if (m5) {
+        m5.remove();
+    }
+}
+  else {
+    m6.innerHTML = "You clicked the button!";
+    if (m5) {
+        m5.remove();
+    }
+  }
+}
+
+m6.addEventListener("click", function() {
+  myFunction2();
+});
+
+const list = document.getElementById("games").classList;
+
+m7.addEventListener("click", function() {
+  list.toggle("new-class");
+});
+
+const todolist = document.getElementById("todo-list");
+
+async function addTodo() {
+    const todoInput = document.getElementById("add-todo-input");
+    const todoText = todoInput.value.trim();
+
+    if (todoText === "") {
+        alert("Please enter a task.");
+        return;
+    }
+
+    await new Promise(resolve => setTimeout(resolve, 200)); // 200ms delay
+
+    const newTodo = document.createElement("li");
+    newTodo.textContent = todoText;
+    todolist.appendChild(newTodo);
+
+    todoInput.value = "";
+}
+document.getElementById("add-todo-btn").addEventListener("click", addTodo);
+
+async function removeTodo() {
+    const todoInput = document.getElementById("add-todo-input");
+    const todoText = todoInput.value.trim();
+    const todos = todolist.getElementsByTagName("li");
+    let found = false;
+    for (let i = 0; i < todos.length; i++) {
+        if (todos[i].textContent === todoText) {
+            await new Promise(resolve => setTimeout(resolve, 200)); // 200ms delay
+            todolist.removeChild(todos[i]);
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        alert("Task not found.");
+    }
+    todoInput.value = "";
+}
+
+document.getElementById("remove-todo-btn").addEventListener("click", removeTodo);
