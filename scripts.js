@@ -323,3 +323,40 @@ async function removeTodo() {
 }
 
 document.getElementById("remove-todo-btn").addEventListener("click", removeTodo);
+
+const inputField = document.getElementById("local-storage-input");
+const saveButton = document.getElementById("save-local-storage-btn");
+const clearButton = document.getElementById("clear-local-storage-btn");
+const storedValueDisplay = document.getElementById("stored-value");
+
+var myData = "myData";
+var Data = null;
+let i = 1;
+
+const storedValue = localStorage.getItem(Data);
+if (storedValue) {
+    storedValueDisplay.textContent = `Stored Value: ${storedValue}`;
+}  else {
+    storedValueDisplay.textContent = "No value stored in localStorage.";
+    inputField.value = "";
+}
+
+clearButton.addEventListener("click", function() {
+    localStorage.clear();
+    inputField.value = "";
+    i = 1;
+});
+
+saveButton.addEventListener("click", function() {
+    const inputValue = inputField.value.trim();
+    if (inputValue) {
+        if (myData == myData) {
+            Data = myData + i;
+            i += 1;
+            localStorage.setItem(Data, inputValue);
+        }
+    } else {
+        alert("Please enter a value to save.");
+    }
+});
+
