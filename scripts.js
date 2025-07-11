@@ -359,5 +359,3 @@ saveButton.addEventListener("click", function() {
         alert("Please enter a value to save.");
     }
 });
-
-
