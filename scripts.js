@@ -232,6 +232,17 @@ if (x=1){
 
 */
 
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [6, 7, 8, 9, 10];
+const arr3 = [...arr1, ...arr2];
+
+console.log(arr3);
+
+const[first, second, ...rest] = arr3;
+console.log("First element:", first);
+console.log("Second element:", second);
+console.log("Rest of the elements:", rest);
+
 const m1 = document.getElementById("games");
 const m2 = document.getElementsByClassName("class1");
 const m3 = document.querySelectorAll("p");
