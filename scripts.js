@@ -330,19 +330,19 @@ const clearButton = document.getElementById("clear-local-storage-btn");
 const storedValueDisplay = document.getElementById("stored-value");
 
 var myData = "myData";
-var Data = null;
+var Data = NaN;
 let i = 1;
 
-const storedValue = localStorage.getItem(Data);
+const storedValue = sessionStorage.getItem(Data);
 if (storedValue) {
     storedValueDisplay.textContent = `Stored Value: ${storedValue}`;
 }  else {
-    storedValueDisplay.textContent = "No value stored in localStorage.";
+    storedValueDisplay.textContent = "No value stored in sessionStorage.";
     inputField.value = "";
 }
 
 clearButton.addEventListener("click", function() {
-    localStorage.clear();
+    sessionStorage.clear();
     inputField.value = "";
     i = 1;
 });
@@ -350,13 +350,14 @@ clearButton.addEventListener("click", function() {
 saveButton.addEventListener("click", function() {
     const inputValue = inputField.value.trim();
     if (inputValue) {
-        if (myData == myData) {
+        if (Data == Data) {
             Data = myData + i;
             i += 1;
-            localStorage.setItem(Data, inputValue);
+            sessionStorage.setItem(Data, inputValue);
         }
     } else {
         alert("Please enter a value to save.");
     }
 });
+
 
